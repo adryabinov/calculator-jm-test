@@ -25,6 +25,10 @@ public class Converter {
                 return "nulla";
             StringBuilder _output = new StringBuilder();
 
+            if (_input < 0)
+                _output.append("-");
+                _input = -_input;
+
             while (_input >= 100) {
                 _output.append("C");
                 _input -= 100;
